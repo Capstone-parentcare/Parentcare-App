@@ -1,0 +1,33 @@
+.artikel-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    margin-left: 200px;
+    max-width: 1000px;
+}
+
+.artikel {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+.artikel > div > img {
+    max-width: 270px;
+    margin-right: 1em;
+}
+
+.artikel > div > a {
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+}
+
+.artikel-container .garis {
+    max-width: 1200px;
+}
+
+.judul{
+    font-size: 46px;
+}
+  

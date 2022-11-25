@@ -1,0 +1,38 @@
+.judul-pertanyaan {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0.5em;
+}
+
+.jawab-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 850px;
+}
+
+.jawab-container > div > div > img {
+    width: 100px;
+}
+
+.jawab {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+.user {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.jawab-container .garis {
+    margin-top: 1em;
+}
+
+.garis-batas {
+    border: 1px solid #1E1E1E;
+    max-width: 1000px;
+    margin-top: 0.5em;
+}

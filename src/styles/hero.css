@@ -1,0 +1,7 @@
+.hero {
+    background-image: url(../public/image/hero_image.jpg);
+    background-position: center; 
+    min-height: 400px;
+    width: 100%;
+    background-size: 100% ;
+}

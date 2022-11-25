@@ -1,0 +1,50 @@
+.button-pertanyaan {
+  background-color: #3282B8;
+  max-width: 620px;
+  padding: 0.25em;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 1em;
+}
+
+.button-pertanyaan > a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25em;
+  font-size: 32px;
+}
+
+.pertanyaan {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  margin-left: 200px;
+  max-width: 620px;
+  margin-top: 2em;
+}
+
+.pertanyaan > div > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.pertanyaan > div {
+  font-size: 26px;
+}
+
+.pertanyaan > div > span {
+  font-size: 24px;
+}
+
+.diskusi {
+  font-size: 46px;
+  margin-left: 200px;
+}
+
+.garis {
+  border: 1px solid #1E1E1E;
+  width: 620px;
+}
