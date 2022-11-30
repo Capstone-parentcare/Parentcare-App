@@ -9,6 +9,12 @@ const createQuestionItemTemplate = (question) => `
   </div>
 `;
 
+const detailArticleTemplate = (article) => `
+  <div class="judul-artikel">${article.title}</div>
+  <div>${article.image}</div>
+  <div class="isi-artikel">${article.content}</div>
+`;
+
 const createMovieDetailTemplate = (movie) => `
   <h2 class="movie__title">${movie.title}</h2>
   <img class="movie__poster" src="${CONFIG.BASE_IMAGE_URL + movie.poster_path}" alt="${movie.title}" />
@@ -49,4 +55,5 @@ export {
   createMovieItemTemplate,
   createMovieDetailTemplate,
   createQuestionItemTemplate,
+  detailArticleTemplate,
 };
