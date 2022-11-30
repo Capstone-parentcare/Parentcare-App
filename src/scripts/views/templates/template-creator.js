@@ -15,6 +15,28 @@ const detailArticleTemplate = (article) => `
   <div class="isi-artikel">${article.content}</div>
 `;
 
+const answerTemplate = (answer) => `
+  <div class="judul-pertanyaan">${answer.title}</div>
+
+  <div class="jawab-container">
+    <div class="jawab">
+      <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
+      <div class="user">${answer.writer}</div>
+    </div>
+    <div class="pertanyaan-user">${answer.content}</div>
+    <div class="garis-batas"></div>
+  <br>
+
+  <div>Dijawab oleh:</div>
+    <div class="jawab">
+      <div><img src="../../image/dokter_ikon.png" alt="Gambar User"></div>
+      <div class="user">${answer.writer}</div>
+    </div>
+    <div class="pertanyaan-user">${answer.content}</div>
+    <div class="garis-batas"></div>
+  </div>
+`;
+
 const createMovieDetailTemplate = (movie) => `
   <h2 class="movie__title">${movie.title}</h2>
   <img class="movie__poster" src="${CONFIG.BASE_IMAGE_URL + movie.poster_path}" alt="${movie.title}" />
@@ -56,4 +78,5 @@ export {
   createMovieDetailTemplate,
   createQuestionItemTemplate,
   detailArticleTemplate,
+  answerTemplate,
 };

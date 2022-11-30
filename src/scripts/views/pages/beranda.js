@@ -1,5 +1,4 @@
 import QuestionSource from '../../data/question-source';
-
 import { createQuestionItemTemplate } from '../templates/template-creator';
 
 const Beranda = {
