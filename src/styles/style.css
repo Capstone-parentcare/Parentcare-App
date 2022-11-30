@@ -28,7 +28,10 @@ body {
 */
 
 main {
+<<<<<<< Updated upstream
   padding: 32px;
+=======
+>>>>>>> Stashed changes
   flex: 1;
 }
 
@@ -39,5 +42,10 @@ main {
 
 .content .content__heading {
   font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 

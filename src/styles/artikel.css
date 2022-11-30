@@ -1,33 +1,47 @@
 .artikel-container {
     display: flex;
     flex-direction: column;
-    margin: 1em;
-    margin-left: 200px;
-    max-width: 1000px;
+    margin: 1em auto;
+    width: 60vw;
 }
 
 .artikel {
     display: flex;
     flex-direction: row;
     margin: 1em;
+    gap: 0.5em;
 }
 
-.artikel > div > img {
-    max-width: 270px;
-    margin-right: 1em;
+.gambar-artikel {
+    width: 20vw;
+    height: 10vw;
+    object-fit: contain;
+
 }
 
-.artikel > div > a {
-    text-decoration: none;
-    color: black;
-    font-size: 26px;
-}
+.artikel p {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    height: 2em;
 
-.artikel-container .garis {
-    max-width: 1200px;
-}
-
-.judul{
-    font-size: 46px;
 }
   
+hr {
+    background-color: grey;
+    border: 1px solid grey;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+    .artikel-container {
+        width: 90vw;
+    }
+    /* .artikel {
+        flex-direction: column;
+    } */
+    .gambar-artikel {
+        width: 40vw;
+        height: 20vw;
+    }
+}
