@@ -1,7 +1,7 @@
 import CONFIG from '../../globals/config';
 
 const createQuestionItemTemplate = (question) => `
-  <div class="question-item">
+  <div class="pertanyaan">
     <div><a href="#/jawab">${question.title}</a></div>
         <div>${question.content}</div>
         <div><br>oleh : ${question.writer}</div>
