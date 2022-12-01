@@ -1,18 +1,26 @@
 import CONFIG from '../../globals/config';
 
 const createQuestionItemTemplate = (question) => `
-  <div class="pertanyaan">
-    <div><a href="#/jawab">${question.title}</a></div>
-        <div>${question.content}</div>
-        <div><br>oleh : ${question.writer}</div>
-        <div class="garis"></div>
-  </div>
+  <a href="#/jawab" class="question">
+    <div class="question-title">
+      <h2>${question.title}</h2>
+    </div>
+    <div class="question-content">
+      <p>${question.content}</p>
+    </div>
+    <div class="question-writer">
+      oleh : ${question.writer}
+    </div>
+    <hr>
+  </a>
 `;
 
 const detailArticleTemplate = (article) => `
   <div class="judul-artikel">${article.title}</div>
   <div>${article.image}</div>
-  <div class="isi-artikel">${article.content}</div>
+  <div class="isi-artikel">
+    <p>${article.content}</p>
+  </div>
 `;
 
 const answerTemplate = (answer) => `

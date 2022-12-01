@@ -1,7 +1,17 @@
 .hero {
     background-image: url(../public/image/hero_image.jpg);
     background-position: center; 
-    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 400px;
+
     width: 100%;
     background-size: 100% ;
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 200px;
+    }
 }

@@ -5,12 +5,13 @@ const Beranda = {
   async render() {
     return `
     <hero-element></hero-element>
-      <div class="button-pertanyaan">
-        <a href="#/form">buat pertanyaan</a>
-      </div>
-      <div id="content">
-        <span class="diskusi">Diskusi Terbaru</span>
-      </div>
+    <div id="content">
+      <a class="button-question" href="#/form">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        Buat Pertanyaan
+      </a>
+      <h1 class="new-discussion">Diskusi Terbaru</h1>
+    </div>
     `;
   },
 
