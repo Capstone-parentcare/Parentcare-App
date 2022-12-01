@@ -12,11 +12,13 @@ const DrawerInitiator = {
   _toggleDrawer(event, drawer) {
     event.stopPropagation();
     drawer.classList.toggle('open');
+    document.getElementById('mainContent').classList.toggle('blur');
   },
 
   _closeDrawer(event, drawer) {
     event.stopPropagation();
     drawer.classList.remove('open');
+    document.getElementById('mainContent').classList.remove('blur');
   },
 };
 
