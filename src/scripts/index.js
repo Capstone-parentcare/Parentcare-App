@@ -7,6 +7,7 @@ import WebSocketInitiator from './utils/websocket-initiator';
 import FooterToolsInitiator from './utils/footer-tools-initiator';
 import CONFIG from './globals/config';
 import './component/hero-element';
+import './component/footer-element';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),

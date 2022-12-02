@@ -5,8 +5,8 @@ class HeroElement extends HTMLElement {
 
   render() {
     this.innerHTML = `
-          <div class="hero"></div>
-          `;
+      <div class="hero"></div>
+    `;
   }
 }
 customElements.define('hero-element', HeroElement);

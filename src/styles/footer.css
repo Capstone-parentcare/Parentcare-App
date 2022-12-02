@@ -2,25 +2,22 @@
   Footer
 */
 
-footer {
-    padding: 16px;
-  }
-  
-  footer #footerTools {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-  }
-  
-  footer p {
-    margin-top: 16px;
-  
-    text-align: center;
-    color: #aaaaaa;
-  }
-  
-  footer p a {
-    color: #db0000;
-    text-decoration: none;
-  }
+footer #footerTools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+footer p {
+  margin-top: 1em;
+  text-align: center;
+  background-color: #0F4C75;
+  color: white;
+  padding: 1em;
+}
+
+.github{
+  font-size: 24px;
+  margin-left: 1em;
+}
