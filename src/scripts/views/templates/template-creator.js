@@ -21,7 +21,7 @@ const articleListTemplate = (article) => `
     <div class="artikel">
       <div class="gambar-artikel">${article.image}</div>
       <p>
-        <a href="#/detail1">${article.title}</a>
+        <a href="#/detail/${article.id}">${article.title}</a>
       </p>
     </div>
     <hr>

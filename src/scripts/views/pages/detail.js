@@ -1,5 +1,5 @@
+import UrlParser from '../../routes/url-parser';
 import QuestionSource from '../../data/question-source';
-
 import { detailArticleTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -10,11 +10,10 @@ const Detail = {
   },
 
   async afterRender() {
-    const articles = await QuestionSource.articleList();
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const detailArticle = await QuestionSource.articleDetail(url.id);
     const articleContainer = document.querySelector('#article');
-    articles.forEach((question) => {
-      articleContainer.innerHTML += detailArticleTemplate(question);
-    });
+    articleContainer.innerHTML += detailArticleTemplate(detailArticle);
   },
 };
 

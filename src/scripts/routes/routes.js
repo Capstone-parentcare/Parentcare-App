@@ -8,8 +8,8 @@ const routes = {
   '/': Beranda, // default page
   '/beranda': Beranda,
   '/artikel': Artikel,
-  // '/detail/:id': Detail,
-  '/detail1': Detail,
+  '/detail/:id': Detail,
+  // '/detail1': Detail,
   '/form': Form,
   '/jawab': Jawab,
 };
