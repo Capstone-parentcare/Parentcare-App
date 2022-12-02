@@ -15,6 +15,18 @@ const createQuestionItemTemplate = (question) => `
   </a>
 `;
 
+const articleListTemplate = (article) => `
+  <div class="artikel-container">
+    <span class="judul"><h1>Artikel List</h1></span>
+    <div class="artikel">
+      <div class="gambar-artikel">${article.image}</div>
+      <p>
+        <a href="#/detail1">${article.title}</a>
+      </p>
+    </div>
+    <hr>
+`;
+
 const detailArticleTemplate = (article) => `
   <div class="judul-artikel">${article.title}</div>
   <div>${article.image}</div>
@@ -86,5 +98,6 @@ export {
   createMovieDetailTemplate,
   createQuestionItemTemplate,
   detailArticleTemplate,
+  articleListTemplate,
   answerTemplate,
 };

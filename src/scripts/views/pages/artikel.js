@@ -1,37 +1,20 @@
-import TheMovieDbSource from '../../data/themoviedb-source';
-import { createMovieItemTemplate } from '../templates/template-creator';
+import QuestionSource from '../../data/question-source';
+import { articleListTemplate } from '../templates/template-creator';
 
-const Upcoming = {
+const Artikel = {
   async render() {
     return `
-      <div class="artikel-container">
-        <span class="judul"><h1>Artikel List</h1></span>
-        <div class="artikel">
-          <img src="../../image/article_image_1.jpg" class="gambar-artikel" alt="Gambar artikel">
-          <p>
-            <a href="#/detail1">Tips Mendampingi Anak Mengerjakan PR</a>
-          </p>
-        </div>
-        <hr>
-
-        <div class="artikel">
-          <img src="../../image/article_image_1.jpg" class="gambar-artikel" alt="Gambar artikel">
-          <p>
-            <a href="#/detail1">Tips Mendampingi Anak Mengerjakan PR</a>
-          </p>
-        </div>
-        <hr>
-      </div>
+      <div id="articleId"></div>
     `;
   },
 
   async afterRender() {
-    const movies = await TheMovieDbSource.upcomingMovies();
-    const moviesContainer = document.querySelector('#movies');
-    movies.forEach((movie) => {
-      moviesContainer.innerHTML += createMovieItemTemplate(movie);
+    const articles = await QuestionSource.articleList();
+    const articleListContainer = document.querySelector('#articleId');
+    articles.forEach((article) => {
+      articleListContainer.innerHTML += articleListTemplate(article);
     });
   },
 };
 
-export default Upcoming;
+export default Artikel;
