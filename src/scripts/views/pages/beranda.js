@@ -5,7 +5,7 @@ const Beranda = {
   async render() {
     return `
     <hero-element></hero-element>
-    <div id="content">
+    <div id="question-container">
       <a class="button-question" href="#/form">
         <i class="fa fa-pencil" aria-hidden="true"></i>
         Buat Pertanyaan
@@ -17,7 +17,7 @@ const Beranda = {
 
   async afterRender() {
     const questions = await QuestionSource.questionList();
-    const questionContainer = document.querySelector('#content');
+    const questionContainer = document.querySelector('#question-container');
     questions.forEach((question) => {
       questionContainer.innerHTML += createQuestionItemTemplate(question);
     });
