@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createQuestionItemTemplate = (question) => `
   <a href="#/questions/${question.id}" class="question">
-    <div class="question-title">
+    <div>
       <h2>${question.title}</h2>
     </div>
     <div class="question-content">
@@ -16,40 +16,40 @@ const createQuestionItemTemplate = (question) => `
 `;
 
 const detailQuestionWithAnswerTemplate = (answer) => `
-<div class="judul-pertanyaan">${answer.question.title}</div>
-<div class="jawab-container">
-  <div class="jawab">
+<div class="question-title">${answer.question.title}</div>
+<div class="answer-container">
+  <div class="answer">
     <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
     <div class="user">${answer.question.writer}</div>
   </div>
   <div class="pertanyaan-user">${answer.question.content}</div>
-  <div class="garis-batas"></div>
+  <div class="line-boundary"></div>
 <br>
 <div>Dijawab oleh:</div>
-  <div class="jawab">
+  <div class="answer">
     <div><img src="../../image/dokter_ikon.png" alt="Gambar User"></div>
     <div class="user">${answer.doctor.username}</div>
   </div>
   <div class="pertanyaan-user">${answer.content}</div>
-  <div class="garis-batas"></div>
+  <div class="line-boundary"></div>
 </div>
 `;
 
 const detailQuestionTemplate = (question) => `
-<div class="judul-pertanyaan">${question.title}</div>
-<div class="jawab-container">
-  <div class="jawab">
+<div class="question-title">${question.title}</div>
+<div class="answer-container">
+  <div class="answer">
     <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
     <div class="user">${question.writer}</div>
   </div>
   <div class="pertanyaan-user">${question.content}</div>
-  <div class="garis-batas"></div>
+  <div class="line-boundary"></div>
 <br>
 `;
 
 const createArticleItemTemplate = (article) => `
-  <div class="artikel">
-    <img src="${CONFIG.BASE_IMAGE_URL + article.image}" class="gambar-artikel" alt="Gambar artikel">
+  <div class="article">
+    <img src="${CONFIG.BASE_IMAGE_URL + article.image}" class="article-picture" alt="Gambar artikel">
     <p>
       <a href="#/articles/${article.id}">${article.title}</a>
     </p>
@@ -58,10 +58,12 @@ const createArticleItemTemplate = (article) => `
 `;
 
 const detailArticleTemplate = (article) => `
-  <div class="judul-artikel">${article.title}</div>
-  <img src="${CONFIG.BASE_IMAGE_URL + article.image}" class="gambar-artikel" alt="Gambar artikel">
-  <div class="isi-artikel">
-    <p>${article.content}</p>
+  <div class="container-detail-article">
+    <div class="article-title">${article.title}</div>
+    <img src="${CONFIG.BASE_IMAGE_URL + article.image}" class="gambar-artikel" alt="Gambar artikel">
+    <div class="article-content">
+      <p>${article.content}</p>
+      <div class="agag"></div>
   </div>
 `;
 

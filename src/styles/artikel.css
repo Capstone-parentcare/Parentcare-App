@@ -1,29 +1,28 @@
-.artikel-container {
+.article-container {
     display: flex;
     flex-direction: column;
     margin: 1em auto;
     width: 60vw;
 }
 
-.artikel {
+.article {
     display: flex;
     flex-direction: row;
     margin: 1em;
     gap: 0.5em;
 }
 
-.gambar-artikel {
-    width: 20vw;
-    height: 10vw;
-    object-fit: contain;
-
-}
-
-.artikel p {
+.article p {
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
     height: 2em;
+}
+
+.article-picture {
+    width: 20vw;
+    height: 10vw;
+    object-fit: contain;
 
 }
   
@@ -34,13 +33,13 @@ hr {
 
 /* media query */
 @media screen and (max-width: 768px) {
-    .artikel-container {
+    .article-container {
         width: 90vw;
     }
     /* .artikel {
         flex-direction: column;
     } */
-    .gambar-artikel {
+    .article-picture {
         width: 40vw;
         height: 20vw;
     }

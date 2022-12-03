@@ -1,10 +1,10 @@
-.judul-pertanyaan {
+.question-title {
     text-align: center;
     font-size: 40px;
     margin-top: 0.5em;
 }
 
-.jawab-container{
+.answer-container{
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -12,11 +12,11 @@
     max-width: 850px;
 }
 
-.jawab-container > div > div > img {
+.answer-container > div > div > img {
     width: 100px;
 }
 
-.jawab {
+.answer {
     display: flex;
     flex-direction: row;
     margin: 1em;
@@ -27,11 +27,11 @@
     margin-left: 20px;
 }
 
-.jawab-container .garis {
+.answer-container .garis {
     margin-top: 1em;
 }
 
-.garis-batas {
+.line-boundary {
     border: 1px solid #1E1E1E;
     max-width: 1000px;
     margin-top: 0.5em;

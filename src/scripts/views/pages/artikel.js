@@ -4,7 +4,7 @@ import { createArticleItemTemplate } from '../templates/template-creator';
 const Artikel = {
   async render() {
     return `
-      <div class="artikel-container">
+      <div id="articleContainer" class="article-container">
         <span class="judul"><h1>Artikel List</h1></span>
       </div>
     `;
@@ -12,7 +12,7 @@ const Artikel = {
 
   async afterRender() {
     const articles = await QuestionSource.articleList();
-    const articlesContainer = document.querySelector('.artikel-container');
+    const articlesContainer = document.querySelector('#articleContainer');
     articles.forEach((article) => {
       articlesContainer.innerHTML += createArticleItemTemplate(article);
     });
