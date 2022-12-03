@@ -1,6 +1,6 @@
 const CONFIG = {
   BASE_URL: 'http://localhost:8081/api/',
-  // BASE_IMAGE_URL: 'https://image.tmdb.org/t/p/w500/',
+  BASE_IMAGE_URL: 'http://localhost:8081/public/images/',
   CACHE_NAME: 'ParentCare',
   DATABASE_NAME: 'parent-care-database',
   DATABASE_VERSION: 1,

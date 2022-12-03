@@ -1,7 +1,7 @@
 import CONFIG from '../../globals/config';
 
 const createQuestionItemTemplate = (question) => `
-  <a href="#/jawab" class="question">
+  <a href="#/questions/${question.id}" class="question">
     <div class="question-title">
       <h2>${question.title}</h2>
     </div>
@@ -15,45 +15,53 @@ const createQuestionItemTemplate = (question) => `
   </a>
 `;
 
-const articleListTemplate = (article) => `
-  <div class="artikel-container">
-    <span class="judul"><h1>Artikel List</h1></span>
-    <div class="artikel">
-      <div class="gambar-artikel">${article.image}</div>
-      <p>
-        <a href="#/detail/${article.id}">${article.title}</a>
-      </p>
-    </div>
-    <hr>
+const detailQuestionWithAnswerTemplate = (answer) => `
+<div class="judul-pertanyaan">${answer.question.title}</div>
+<div class="jawab-container">
+  <div class="jawab">
+    <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
+    <div class="user">${answer.question.writer}</div>
+  </div>
+  <div class="pertanyaan-user">${answer.question.content}</div>
+  <div class="garis-batas"></div>
+<br>
+<div>Dijawab oleh:</div>
+  <div class="jawab">
+    <div><img src="../../image/dokter_ikon.png" alt="Gambar User"></div>
+    <div class="user">${answer.doctor.username}</div>
+  </div>
+  <div class="pertanyaan-user">${answer.content}</div>
+  <div class="garis-batas"></div>
+</div>
+`;
+
+const detailQuestionTemplate = (question) => `
+<div class="judul-pertanyaan">${question.title}</div>
+<div class="jawab-container">
+  <div class="jawab">
+    <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
+    <div class="user">${question.writer}</div>
+  </div>
+  <div class="pertanyaan-user">${question.content}</div>
+  <div class="garis-batas"></div>
+<br>
+`;
+
+const createArticleItemTemplate = (article) => `
+  <div class="artikel">
+    <img src="${CONFIG.BASE_IMAGE_URL + article.image}" class="gambar-artikel" alt="Gambar artikel">
+    <p>
+      <a href="#/articles/${article.id}">${article.title}</a>
+    </p>
+  </div>
+  <hr>
 `;
 
 const detailArticleTemplate = (article) => `
   <div class="judul-artikel">${article.title}</div>
-  <div>${article.image}</div>
+  <img src="${CONFIG.BASE_IMAGE_URL + article.image}" class="gambar-artikel" alt="Gambar artikel">
   <div class="isi-artikel">
     <p>${article.content}</p>
-  </div>
-`;
-
-const answerTemplate = (answer) => `
-  <div class="judul-pertanyaan">${answer.title}</div>
-
-  <div class="jawab-container">
-    <div class="jawab">
-      <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
-      <div class="user">${answer.writer}</div>
-    </div>
-    <div class="pertanyaan-user">${answer.content}</div>
-    <div class="garis-batas"></div>
-  <br>
-
-  <div>Dijawab oleh:</div>
-    <div class="jawab">
-      <div><img src="../../image/dokter_ikon.png" alt="Gambar User"></div>
-      <div class="user">${answer.writer}</div>
-    </div>
-    <div class="pertanyaan-user">${answer.content}</div>
-    <div class="garis-batas"></div>
   </div>
 `;
 
@@ -97,7 +105,8 @@ export {
   createMovieItemTemplate,
   createMovieDetailTemplate,
   createQuestionItemTemplate,
+  detailQuestionWithAnswerTemplate,
+  detailQuestionTemplate,
+  createArticleItemTemplate,
   detailArticleTemplate,
-  articleListTemplate,
-  answerTemplate,
 };

@@ -6,12 +6,11 @@ import Jawab from '../views/pages/jawab';
 
 const routes = {
   '/': Beranda, // default page
-  '/beranda': Beranda,
-  '/artikel': Artikel,
-  '/detail/:id': Detail,
-  // '/detail1': Detail,
+  '/questions': Beranda,
+  '/questions/:id': Jawab,
   '/form': Form,
-  '/jawab': Jawab,
+  '/articles': Artikel,
+  '/articles/:id': Detail,
 };
 
 export default routes;

@@ -11,9 +11,9 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const detailArticle = await QuestionSource.articleDetail(url.id);
+    const article = await QuestionSource.articleDetail(url.id);
     const articleContainer = document.querySelector('#article');
-    articleContainer.innerHTML += detailArticleTemplate(detailArticle);
+    articleContainer.innerHTML += detailArticleTemplate(article);
   },
 };
 

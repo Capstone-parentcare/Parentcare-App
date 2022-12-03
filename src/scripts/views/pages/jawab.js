@@ -1,19 +1,24 @@
+import UrlParser from '../../routes/url-parser';
 import QuestionSource from '../../data/question-source';
-import { answerTemplate } from '../templates/template-creator';
+import { detailQuestionTemplate, detailQuestionWithAnswerTemplate } from '../templates/template-creator';
 
 const Jawab = {
   async render() {
     return `
-      <div id="answer"></div>
+    <div id="question-detail"></div>
     `;
   },
 
   async afterRender() {
-    const answers = await QuestionSource.answerQuestion();
-    const answersContainer = document.querySelector('#answer');
-    answers.forEach((answer) => {
-      answersContainer.innerHTML += answerTemplate(answer);
-    });
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const answer = await QuestionSource.questionDetailWithAnswer(url.id);
+    const answersContainer = document.querySelector('#question-detail');
+    if (answer) {
+      answersContainer.innerHTML = detailQuestionWithAnswerTemplate(answer);
+    } else {
+      const question = await QuestionSource.questionDetail(url.id);
+      answersContainer.innerHTML = detailQuestionTemplate(question);
+    }
   },
 };
 
