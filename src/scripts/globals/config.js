@@ -4,8 +4,6 @@ const CONFIG = {
   CACHE_NAME: 'ParentCare',
   DATABASE_NAME: 'parent-care-database',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'movies',
-  WEB_SOCKET_SERVER: 'wss://movies-feed.dicoding.dev',
 };
 
 export default CONFIG;
