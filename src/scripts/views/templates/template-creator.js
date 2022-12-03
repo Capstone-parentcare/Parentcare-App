@@ -15,6 +15,7 @@ const createQuestionItemTemplate = (question) => `
   </a>
 `;
 
+<<<<<<< HEAD
 const detailQuestionWithAnswerTemplate = (answer) => `
 <div class="judul-pertanyaan">${answer.question.title}</div>
 
@@ -22,6 +23,25 @@ const detailQuestionWithAnswerTemplate = (answer) => `
   <div class="jawab">
     <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
     <div class="user">${answer.question.writer}</div>
+=======
+const articleListTemplate = (article) => `
+  <div class="artikel-container">
+    <span class="judul"><h1>Artikel List</h1></span>
+    <div class="artikel">
+      <div class="gambar-artikel">${article.image}</div>
+      <p>
+        <a href="#/detail1">${article.title}</a>
+      </p>
+    </div>
+    <hr>
+`;
+
+const detailArticleTemplate = (article) => `
+  <div class="judul-artikel">${article.title}</div>
+  <div>${article.image}</div>
+  <div class="isi-artikel">
+    <p>${article.content}</p>
+>>>>>>> bc4513d4dd51cc954d36631461c7e1a389e1d377
   </div>
   <div class="pertanyaan-user">${answer.question.content}</div>
   <div class="garis-batas"></div>
@@ -113,4 +133,9 @@ export {
   detailQuestionTemplate,
   createArticleItemTemplate,
   detailArticleTemplate,
+<<<<<<< HEAD
+=======
+  articleListTemplate,
+  answerTemplate,
+>>>>>>> bc4513d4dd51cc954d36631461c7e1a389e1d377
 };
