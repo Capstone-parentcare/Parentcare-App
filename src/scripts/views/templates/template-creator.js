@@ -1,7 +1,7 @@
 import CONFIG from '../../globals/config';
 
 const createQuestionItemTemplate = (question) => `
-  <a href="#/jawab" class="question">
+  <a href="#/questions/${question.id}" class="question">
     <div class="question-title">
       <h2>${question.title}</h2>
     </div>
@@ -13,6 +13,17 @@ const createQuestionItemTemplate = (question) => `
     </div>
     <hr>
   </a>
+`;
+
+const createArticleItemTemplate = (article) => `
+
+<div class="artikel">
+  <img src="${CONFIG.BASE_IMAGE_URL + article.image}" class="gambar-artikel" alt="Gambar artikel">
+  <p>
+    <a href="#/detail/${article.id}">${article.title}</a>
+  </p>
+</div>
+<hr>
 `;
 
 const detailArticleTemplate = (article) => `
@@ -85,6 +96,7 @@ export {
   createMovieItemTemplate,
   createMovieDetailTemplate,
   createQuestionItemTemplate,
+  createArticleItemTemplate,
   detailArticleTemplate,
   answerTemplate,
 };
