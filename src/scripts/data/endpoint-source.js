@@ -35,13 +35,6 @@ class EndpointSource {
     console.log(responseJson.data);
     return responseJson.data;
   }
-
-  static async answerQuestion() {
-    const response = await fetch(API_ENDPOINT.ANSWER);
-    const responseJson = await response.json();
-    console.log(responseJson.data);
-    return responseJson.data;
-  }
 }
 
 export default EndpointSource;
