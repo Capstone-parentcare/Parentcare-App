@@ -1,7 +1,7 @@
 import EndpointSource from '../../data/endpoint-source';
 import { createQuestionItemTemplate } from '../templates/template-creator';
 
-const Beranda = {
+const Home = {
   async render() {
     return `
     <hero-element></hero-element>
@@ -24,4 +24,4 @@ const Beranda = {
   },
 };
 
-export default Beranda;
+export default Home;
