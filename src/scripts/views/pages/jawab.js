@@ -1,5 +1,5 @@
 import UrlParser from '../../routes/url-parser';
-import QuestionSource from '../../data/question-source';
+import EndpointSource from '../../data/endpoint-source';
 import { detailQuestionTemplate, detailQuestionWithAnswerTemplate } from '../templates/template-creator';
 
 const Jawab = {
@@ -11,12 +11,12 @@ const Jawab = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const answer = await QuestionSource.questionDetailWithAnswer(url.id);
+    const answer = await EndpointSource.questionDetailWithAnswer(url.id);
     const answersContainer = document.querySelector('#question-detail');
     if (answer) {
       answersContainer.innerHTML = detailQuestionWithAnswerTemplate(answer);
     } else {
-      const question = await QuestionSource.questionDetail(url.id);
+      const question = await EndpointSource.questionDetail(url.id);
       answersContainer.innerHTML = detailQuestionTemplate(question);
     }
   },

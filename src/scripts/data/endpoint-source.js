@@ -1,6 +1,6 @@
 import API_ENDPOINT from '../globals/api-endpoint';
 
-class QuestionSource {
+class EndpointSource {
   static async questionList() {
     const response = await fetch(API_ENDPOINT.QUESTION);
     const responseJson = await response.json();
@@ -44,4 +44,4 @@ class QuestionSource {
   }
 }
 
-export default QuestionSource;
+export default EndpointSource;

@@ -1,5 +1,5 @@
 import UrlParser from '../../routes/url-parser';
-import QuestionSource from '../../data/question-source';
+import EndpointSource from '../../data/endpoint-source';
 import { detailArticleTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -11,7 +11,7 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const article = await QuestionSource.articleDetail(url.id);
+    const article = await EndpointSource.articleDetail(url.id);
     const articleContainer = document.querySelector('#article');
     articleContainer.innerHTML += detailArticleTemplate(article);
   },

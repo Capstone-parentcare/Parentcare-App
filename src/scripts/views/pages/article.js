@@ -1,7 +1,7 @@
-import QuestionSource from '../../data/question-source';
+import EndpointSource from '../../data/endpoint-source';
 import { createArticleItemTemplate } from '../templates/template-creator';
 
-const Artikel = {
+const Article = {
   async render() {
     return `
       <div id="articleContainer" class="article-container">
@@ -11,7 +11,7 @@ const Artikel = {
   },
 
   async afterRender() {
-    const articles = await QuestionSource.articleList();
+    const articles = await EndpointSource.articleList();
     const articlesContainer = document.querySelector('#articleContainer');
     articles.forEach((article) => {
       articlesContainer.innerHTML += createArticleItemTemplate(article);
@@ -19,4 +19,4 @@ const Artikel = {
   },
 };
 
-export default Artikel;
+export default Article;

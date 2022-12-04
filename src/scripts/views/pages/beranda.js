@@ -1,4 +1,4 @@
-import QuestionSource from '../../data/question-source';
+import EndpointSource from '../../data/endpoint-source';
 import { createQuestionItemTemplate } from '../templates/template-creator';
 
 const Beranda = {
@@ -16,7 +16,7 @@ const Beranda = {
   },
 
   async afterRender() {
-    const questions = await QuestionSource.questionList();
+    const questions = await EndpointSource.questionList();
     const questionContainer = document.querySelector('#question-container');
     questions.forEach((question) => {
       questionContainer.innerHTML += createQuestionItemTemplate(question);
