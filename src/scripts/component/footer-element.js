@@ -5,7 +5,11 @@ class FooterElement extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <p>Copyright © 2022 - ParentCare <a href="https://github.com/orgs/Capstone-parentcare/repositories" class="github"><i class="fa fa-github" aria-hidden="true"></i> Github </a></p>
+      <p>Copyright © 2022 - ParentCare</p>
+      <a href="https://github.com/orgs/Capstone-parentcare/repositories" class="github">
+        <i class="fa fa-github" aria-hidden="true"></i> 
+        <p>C22-235</p>
+      </a>
     `;
   }
 }
