@@ -77,17 +77,3 @@
 .app-bar .app-bar__navigation ul li a:hover{
   font-weight: bold;
 }
-
-/* media query */
-@media screen and (max-width: 600px) {
-    .app-bar .app-bar__navigation {
-      height: 100vh;
-      background-color: #3282B8;
-    }
-
-    .app-bar .app-bar__navigation ul li {
-      border-width: 0 0 1px 0;
-      border-color: white;
-      border-style: solid;
-    } 
-  }
