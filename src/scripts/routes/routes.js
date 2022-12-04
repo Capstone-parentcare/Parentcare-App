@@ -1,14 +1,14 @@
 import Home from '../views/pages/home';
 import Article from '../views/pages/article';
 import ArticleDetail from '../views/pages/article-detail';
-import Form from '../views/pages/form';
-import Jawab from '../views/pages/jawab';
+import QuestionForm from '../views/pages/question-form';
+import Jawab from '../views/pages/question-detail';
 
 const routes = {
   '/': Home, // default page
   '/questions': Home,
   '/questions/:id': Jawab,
-  '/form': Form,
+  '/form': QuestionForm,
   '/articles': Article,
   '/articles/:id': ArticleDetail,
 };

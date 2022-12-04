@@ -1,7 +1,7 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
 import QuestionFormInitiator from '../../utils/form-initiator';
 
-const Like = {
+const QuestionForm = {
   async render() {
     return `
     <div class="form-container">
@@ -32,4 +32,4 @@ const Like = {
   },
 };
 
-export default Like;
+export default QuestionForm;
