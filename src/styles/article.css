@@ -30,17 +30,3 @@ hr {
     background-color: grey;
     border: 1px solid grey;
 }
-
-/* media query */
-@media screen and (max-width: 768px) {
-    .article-container {
-        width: 90vw;
-    }
-    /* .artikel {
-        flex-direction: column;
-    } */
-    .article-picture {
-        width: 40vw;
-        height: 20vw;
-    }
-}
