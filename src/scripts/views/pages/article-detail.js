@@ -2,7 +2,7 @@ import UrlParser from '../../routes/url-parser';
 import EndpointSource from '../../data/endpoint-source';
 import { detailArticleTemplate } from '../templates/template-creator';
 
-const Detail = {
+const ArticleDetail = {
   async render() {
     return `
       <div id="article"></div>
@@ -17,4 +17,4 @@ const Detail = {
   },
 };
 
-export default Detail;
+export default ArticleDetail;

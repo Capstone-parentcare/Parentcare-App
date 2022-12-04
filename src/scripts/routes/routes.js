@@ -1,6 +1,6 @@
 import Home from '../views/pages/home';
-import article from '../views/pages/article';
-import Detail from '../views/pages/detail';
+import Article from '../views/pages/article';
+import ArticleDetail from '../views/pages/article-detail';
 import Form from '../views/pages/form';
 import Jawab from '../views/pages/jawab';
 
@@ -9,8 +9,8 @@ const routes = {
   '/questions': Home,
   '/questions/:id': Jawab,
   '/form': Form,
-  '/articles': article,
-  '/articles/:id': Detail,
+  '/articles': Article,
+  '/articles/:id': ArticleDetail,
 };
 
 export default routes;
