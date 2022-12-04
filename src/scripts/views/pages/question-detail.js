@@ -2,7 +2,7 @@ import UrlParser from '../../routes/url-parser';
 import EndpointSource from '../../data/endpoint-source';
 import { detailQuestionTemplate, detailQuestionWithAnswerTemplate } from '../templates/template-creator';
 
-const Jawab = {
+const QuestionDetail = {
   async render() {
     return `
     <div id="question-detail"></div>
@@ -22,4 +22,4 @@ const Jawab = {
   },
 };
 
-export default Jawab;
+export default QuestionDetail;
