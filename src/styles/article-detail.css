@@ -1,0 +1,28 @@
+.container-detail-article{
+    margin: 0 2em 0 2em;
+    text-align: center;
+}
+
+.container-detail-article > img {
+    height: 400px;
+}
+
+.article-title {
+    font-size: 46px;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.article-content {
+    font-size: 24px;
+    margin-top: 1em;
+}
+
+
+@media screen and (max-width: 699px) {
+    .container-detail-article > img {
+        height: 300px;
+    }
+}
+
+  

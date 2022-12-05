@@ -23,15 +23,3 @@ self.addEventListener('push', (event) => {
 
   event.waitUntil(self.registration.showNotification(notification.title, notification.options));
 });
-
-self.addEventListener('notificationclick', (event) => {
-  const clickedNotification = event.notification;
-  clickedNotification.close();
-
-  const chainPromise = async () => {
-    console.log('Notification has been clicked');
-    await self.clients.openWindow('https://www.dicoding.com/');
-  };
-
-  event.waitUntil(chainPromise());
-});

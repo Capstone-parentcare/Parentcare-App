@@ -13,10 +13,8 @@ const questionFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-    console.log(response);
-    // redirect content to home page if success
+
     if (response.status === 200) {
-      console.log('success');
       window.location.href = '/';
     }
   }

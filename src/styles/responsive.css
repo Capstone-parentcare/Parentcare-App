@@ -29,10 +29,6 @@
     text-align: center;
     margin: 0 0.5em;
   }
-
-  footer #footerTools {
-    flex-direction: row;
-  }
 }
 
 @media screen and (min-width: 800px) {
@@ -41,3 +37,36 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .article-container {
+      width: 90vw;
+  }
+  
+  .article-picture {
+      width: 40vw;
+      height: 20vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app-bar .app-bar__navigation {
+    height: 100vh;
+    background-color: #3282B8;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+    border-width: 0 0 1px 0;
+    border-color: white;
+    border-style: solid;
+  } 
+
+  .hero {
+    height: 200px;
+  }
+
+  #question-container {
+    width: 100vw;
+    margin: 0;
+    padding: 0.5em;
+  }
+} 

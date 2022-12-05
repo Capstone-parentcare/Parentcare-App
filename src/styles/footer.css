@@ -1,23 +1,12 @@
-/*
-  Footer
-*/
-
-footer #footerTools {
+footer-element, footer-element a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  gap: 8px;
-}
+  align-items: center;
 
-footer p {
-  margin-top: 1em;
-  text-align: center;
   background-color: #0F4C75;
   color: white;
-  padding: 1em;
-}
-
-.github{
-  font-size: 24px;
-  margin-left: 1em;
+  
+  gap: 0.5em;
+  padding: 1em 0;
 }
