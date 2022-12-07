@@ -1,0 +1,12 @@
+footer-element, footer-element a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0F4C75;
+  color: white;
+  
+  gap: 0.5em;
+  padding: 1em 0;
+}
