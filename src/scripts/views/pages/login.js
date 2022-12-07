@@ -1,11 +1,9 @@
-class HeroElement extends HTMLElement {
-  connectedCallback() {
-    this.render();
-  }
+import API_ENDPOINT from '../../globals/api-endpoint';
 
-  render() {
-    this.innerHTML = `
-      <div class="login-container">
+const Login = {
+  async render() {
+    return `
+    <div class="login-container">
         <h1>Login</h1>
         <form>
             <label>Username</label><br>
@@ -15,7 +13,12 @@ class HeroElement extends HTMLElement {
             <button>Log in</button>
         </form>
       </div>
-      `;
-  }
-}
-customElements.define('login-page', HeroElement);
+    `;
+  },
+
+  async afterRender() {
+    
+  },
+};
+
+export default Login;
