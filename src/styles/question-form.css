@@ -20,6 +20,10 @@ textarea{
     height: 180px;
 }
 
+input[type=text]{
+    width: 100%;
+}
+
 input[type=submit]  {
     float: right;
     background-color: #3282B8;

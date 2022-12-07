@@ -29,3 +29,20 @@ hr {
     background-color: grey;
     border: 1px solid grey;
 }
+
+.button-article {
+    font-weight: normal;
+    background-color: #3282B8;
+    color: white;
+    font-size: 20px;
+    width: 200px;
+    gap: 0.5em;
+    padding: 0.5em;
+    float: right;
+
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}

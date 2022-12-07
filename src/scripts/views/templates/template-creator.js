@@ -15,6 +15,23 @@ const createQuestionItemTemplate = (question) => `
   </a>
 `;
 
+const createQuestionItemTemplatePsychologist = (question) => `
+
+  <a href="#" class="button-answer">Jawab</a>  
+  <a href="#/questions/${question.id}" class="question">
+    <div>
+      <h2>${question.title}</h2>
+    </div>
+    <div class="question-content">
+      <p>${question.content}</p>
+    </div>
+    <div class="question-writer">
+      oleh : ${question.writer}
+    </div>
+    <hr>
+  </a>
+`;
+
 const detailQuestionWithAnswerTemplate = (answer) => `
 <div class="question-title">${answer.question.title}</div>
 <div class="answer-container">
@@ -73,4 +90,5 @@ export {
   detailQuestionTemplate,
   createArticleItemTemplate,
   detailArticleTemplate,
+  createQuestionItemTemplatePsychologist,
 };

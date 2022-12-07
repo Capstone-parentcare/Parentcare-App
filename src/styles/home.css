@@ -30,3 +30,19 @@
   gap: 1em;
   margin: 1em 0;
 }
+
+.button-answer {
+  background-color: #3282B8;
+  color: white;
+  float: right;
+  font-size: 20px;
+  width: 200px;
+  gap: 0.5em;
+  padding: 0.5em;
+
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
