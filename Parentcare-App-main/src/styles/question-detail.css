@@ -1,0 +1,38 @@
+.question-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0.5em;
+}
+
+.answer-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 850px;
+}
+
+.answer-container > div > div > img {
+    width: 100px;
+}
+
+.answer {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+.user {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.answer-container .garis {
+    margin-top: 1em;
+}
+
+.line-boundary {
+    border: 1px solid #1E1E1E;
+    max-width: 1000px;
+    margin-top: 0.5em;
+}

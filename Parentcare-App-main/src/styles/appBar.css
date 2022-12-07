@@ -1,0 +1,79 @@
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #0F4C75;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+#hamburgerButton {
+  color: white;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: white;
+  user-select: none;
+  font-family: 'Lobster';
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 55px;
+  left: -180px;
+  
+  transition: all 0.3s;
+  
+  overflow: hidden;
+  font-size: 24px;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+#mainContent.blur {
+  filter: blur(5px);
+}
+
+
+.app-bar .app-bar__navigation ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.app-bar .app-bar__navigation ul li a:hover{
+  font-weight: bold;
+}
