@@ -35,6 +35,12 @@ class EndpointSource {
 
     return responseJson.data;
   }
+
+  static async login() {
+    const response = await fetch(API_ENDPOINT.LOGIN());
+    const responseJson = await response.json();
+    return responseJson.data;
+  }
 }
 
 export default EndpointSource;
