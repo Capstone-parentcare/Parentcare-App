@@ -1,18 +1,23 @@
-import API_ENDPOINT from '../../globals/api-endpoint';
+import API_ENDPOINT from "../../globals/api-endpoint";
+import ArticleFormInitiator from '../../utils/article-form-initiator';
 
+const doktorId = localStorage.getItem('doktorId');
 const ArticleForm = {
   async render() {
     return `
     <div class="form-container">
       <h1>Form Artikel</h1>
-      <form id="question-form" method="POST" action="${API_ENDPOINT.QUESTION}">
+      <form id="article-form" method="POST" action="${API_ENDPOINT.ARTICLE}">
+        <div>
+          <input type="text" id="doctor_id" name="doctor_id" placeholder="Judul Pertanyaan" value="${doktorId}"  required></input>         
+        </div>
         <div>
           <label for="title">Judul:</label><br>
           <input type="text" id="title" name="title" placeholder="Judul Pertanyaan" required><br>
         </div>
         <div>
-          <label for="picture">Gambar:</label><br>
-          <input type="file" id="picture" name ="picture" required><br>
+          <label for="image">Gambar:</label><br>
+          <input type="file" id="image" name ="image" required><br>
         </div>
         <div>
           <label for="content">Isi:</label><br>
@@ -26,7 +31,9 @@ const ArticleForm = {
 
   // eslint-disable-next-line no-empty-function
   async afterRender() {
-
+    ArticleFormInitiator.init({
+      formContainer: document.querySelector('#article-form'),
+    });
   },
 };
 
