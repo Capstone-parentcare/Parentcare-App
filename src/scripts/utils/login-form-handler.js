@@ -7,10 +7,11 @@ const questionFormHandler = async (event) => {
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#password').value;
   axios.post(`http://localhost:8081/api/login?email=${email}&password=${password}`).then((response) => {
-    console.log('HIHI', response.data.status);
+    console.log('HIHI', response.data.data);
     if (response.data.status === 'Success') {
       console.log('MASUKK');
-      window.location.href = '#/questions';
+      window.localStorage.setItem('doktorId', response.data.data[0].id);
+      window.location.href = '#/questions_psychologist';
     } else {
       Swal.fire({
         icon: 'error',

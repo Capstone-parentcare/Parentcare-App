@@ -5,7 +5,7 @@ const ArticlePsychologist = {
   async render() {
     return `
       <div id="articleContainer" class="article-container">
-        <h1 class="judul">Artikel List <a href="#" class="button-article">Buat Artikel</a></h1>
+        <h1 class="judul">Artikel List <a href="#/articles_form" class="button-article">Buat Artikel</a></h1>
         
       </div>
     `;
