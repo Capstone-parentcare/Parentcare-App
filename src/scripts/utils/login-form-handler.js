@@ -1,4 +1,8 @@
 /* eslint-disable no-undef */
+import { logoutButton } from '../views/templates/template-creator';
+import logoutButtonInitiator from './logout-button-initiator';
+
+const logoutButtonContainer = document.querySelector('.menu');
 const axios = require('axios');
 const Swal = require('sweetalert2');
 
@@ -7,10 +11,14 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#password').value;
   axios.post(`http://localhost:8081/api/login?email=${email}&password=${password}`).then((response) => {
-    console.log('HIHI', response.data.data);
     if (response.data.status === 'Success') {
-      console.log('MASUKK');
-      window.localStorage.setItem('doktorId', response.data.data[0].id);
+      window.localStorage.setItem('doctorID', response.data.data[0].id);
+
+      logoutButtonContainer.innerHTML += logoutButton();
+      logoutButtonInitiator.init({
+        logoutButtonContainer: document.querySelector('.logout'),
+      });
+
       window.location.href = '#/questions_psychologist';
     } else {
       Swal.fire({
