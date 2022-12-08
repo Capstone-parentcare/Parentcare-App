@@ -1,4 +1,4 @@
-import API_ENDPOINT from "../../globals/api-endpoint";
+import API_ENDPOINT from '../../globals/api-endpoint';
 import ArticleFormInitiator from '../../utils/article-form-initiator';
 
 const doktorId = localStorage.getItem('doktorId');
@@ -29,7 +29,6 @@ const ArticleForm = {
     `;
   },
 
-  // eslint-disable-next-line no-empty-function
   async afterRender() {
     ArticleFormInitiator.init({
       formContainer: document.querySelector('#article-form'),

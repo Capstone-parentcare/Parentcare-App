@@ -2,7 +2,7 @@
 const axios = require('axios');
 const Swal = require('sweetalert2');
 
-const questionFormHandler = async (event) => {
+const loginFormHandler = async (event) => {
   event.preventDefault();
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#password').value;
@@ -22,4 +22,4 @@ const questionFormHandler = async (event) => {
   });
 };
 
-export default questionFormHandler;
+export default loginFormHandler;

@@ -1,6 +1,6 @@
 import questionFormHandler from './answer-form-handler';
 
-const QuestionFormInitiator = {
+const AnswerFormInitiator = {
   init({ formContainer }) {
     formContainer.addEventListener('submit', (event) => {
       questionFormHandler(event);
@@ -8,4 +8,4 @@ const QuestionFormInitiator = {
   },
 };
 
-export default QuestionFormInitiator;
+export default AnswerFormInitiator;

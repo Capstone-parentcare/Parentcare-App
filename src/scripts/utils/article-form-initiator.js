@@ -1,11 +1,11 @@
-import questionFormHandler from './article-form-handler';
+import articleFormHandler from './article-form-handler';
 
-const QuestionFormInitiator = {
+const ArticleFormInitiator = {
   init({ formContainer }) {
     formContainer.addEventListener('submit', (event) => {
-      questionFormHandler(event);
+      articleFormHandler(event);
     });
   },
 };
 
-export default QuestionFormInitiator;
+export default ArticleFormInitiator;

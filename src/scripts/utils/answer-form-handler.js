@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import API_ENDPOINT from '../globals/api-endpoint';
 
-const questionFormHandler = async (event) => {
+const answerFormHandler = async (event) => {
   event.preventDefault();
   const doctor_id = document.querySelector('#doctor_id').value.trim();
   const question_id = document.querySelector('#question_id').value.trim();
@@ -24,4 +24,4 @@ const questionFormHandler = async (event) => {
   }
 };
 
-export default questionFormHandler;
+export default answerFormHandler;
