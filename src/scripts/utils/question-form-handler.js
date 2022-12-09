@@ -14,6 +14,9 @@ const questionFormHandler = async (event) => {
       },
     });
 
+    alert('pertanyaan anda sudah di post');
+    location.replace('#/');
+
     if (response.status === 200) {
       window.location.href = '/';
     }
