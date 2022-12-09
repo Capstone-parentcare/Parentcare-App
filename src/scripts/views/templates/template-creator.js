@@ -119,7 +119,7 @@ const logoutButtonTemplate = () => `
 </a></li>
 `;
 
-const answerButton = (question) => `
+const answerButtonTemplate = (question) => `
 <div class="question-title">${question.title}</div>
 <div class="answer-container">
   <div class="answer">
@@ -129,7 +129,7 @@ const answerButton = (question) => `
   <div class="pertanyaan-user">${question.content}</div>
   <div class="line-boundary"></div>
 <br>
-<a href="#/answer/${question.id}" class="button-answer">Jawab</a>
+<a href="#/answers_form/${question.id}" class="button-answer">Jawab</a>
 `;
 
 export {
@@ -141,6 +141,6 @@ export {
   createQuestionItemTemplatePsychologist,
   answeredTemplatePyscho,
   detailAnswerTemplate,
-  answerButton,
+  answerButtonTemplate,
   logoutButtonTemplate,
 };
