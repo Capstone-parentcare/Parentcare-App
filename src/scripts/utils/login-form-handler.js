@@ -19,7 +19,7 @@ const loginFormHandler = async (event) => {
         logoutButtonContainer: document.querySelector('.logout'),
       });
 
-      window.location.href = '#/questions_psychologist';
+      window.location.href = '#/questions';
     } else {
       Swal.fire({
         icon: 'error',

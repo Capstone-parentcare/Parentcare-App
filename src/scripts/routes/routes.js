@@ -12,13 +12,13 @@ import AnswerPyscho from '../views/pages/question-detail-pyschologist';
 
 const routes = {
   '/': Home, // default page
-  '/questions': Home,
+  '/questions': HomePsychologist,
   '/questions/:id': QuestionDetail,
   '/form': QuestionForm,
   '/articles': Article,
   '/articles/:id': ArticleDetail,
   '/login': Login,
-  '/questions_psychologist': HomePsychologist,
+  // '/questions_psychologist': HomePsychologist,
   '/articles_psychologist': ArticlePsychologist,
   '/articles_form': ArticleForm,
   '/answer/:id': Answer,

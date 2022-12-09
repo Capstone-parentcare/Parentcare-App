@@ -60,7 +60,6 @@ const detailQuestionTemplate = (question) => `
   </div>
   <div class="pertanyaan-user">${question.content}</div>
   <div class="line-boundary"></div>
-  <a href="#/answer/${question.id}" class="button-answer">Jawab</a>
 <br>
 `;
 
@@ -121,6 +120,20 @@ const logoutButton = () => `
   <span>Keluar</span>
 </a></li>
 `;
+
+const answerButton = (question) => `
+<div class="question-title">${question.title}</div>
+<div class="answer-container">
+  <div class="answer">
+    <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
+    <div class="user">${question.writer}</div>
+  </div>
+  <div class="pertanyaan-user">${question.content}</div>
+  <div class="line-boundary"></div>
+<br>
+<a href="#/answer/${question.id}" class="button-answer">Jawab</a>
+`;
+
 export {
   createQuestionItemTemplate,
   detailQuestionWithAnswerTemplate,
@@ -131,4 +144,5 @@ export {
   answeredTemplatePyscho,
   detailAnswerTemplate,
   logoutButton,
+  answerButton,
 };
