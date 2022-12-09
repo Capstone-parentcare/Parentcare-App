@@ -3,6 +3,18 @@ import { createQuestionItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
+    const isDoctor = window.localStorage.getItem('doctorID');
+    const doctorUsername = window.localStorage.getItem('doctorUsername');
+
+    if (isDoctor) {
+      return `
+      <hero-element></hero-element>
+      <div id="question-container">
+      <h1 class="doctor-name">Halo Dokter, ${doctorUsername}!</h1>
+        <h1 class="welcome">Selamat datang di ParentCare.</h1>
+      </div>
+      `;
+    }
     return `
     <hero-element></hero-element>
     <div id="question-container">
