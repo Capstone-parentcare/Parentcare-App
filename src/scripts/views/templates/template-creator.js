@@ -114,6 +114,13 @@ const detailAnswerTemplate = (question) => `
   <div class="line-boundary"></div>
 <br>
 `;
+
+const logoutButton = () => `
+<li class="logout"><a>
+  <i class="fa fa-sign-out" aria-hidden="true"></i>
+  <span>Keluar</span>
+</a></li>
+`;
 export {
   createQuestionItemTemplate,
   detailQuestionWithAnswerTemplate,
@@ -123,4 +130,5 @@ export {
   createQuestionItemTemplatePsychologist,
   answeredTemplatePyscho,
   detailAnswerTemplate,
+  logoutButton,
 };

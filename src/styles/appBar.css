@@ -76,4 +76,5 @@
 
 .app-bar .app-bar__navigation ul li a:hover{
   font-weight: bold;
+  cursor: pointer;
 }

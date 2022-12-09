@@ -3,6 +3,16 @@ import { createArticleItemTemplate } from '../templates/template-creator';
 
 const Article = {
   async render() {
+    const isDoctor = window.localStorage.getItem('doctorID');
+
+    if (isDoctor) {
+      return `
+        <div id="articleContainer" class="article-container">
+          <h1 class="judul">Artikel List <a href="#/articles/form" class="button-article">Buat Artikel</a></h1>  
+        </div>
+      `;
+    }
+
     return `
       <div id="articleContainer" class="article-container">
         <span class="judul"><h1>Artikel List</h1></span>
