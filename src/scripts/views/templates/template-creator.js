@@ -60,7 +60,6 @@ const detailQuestionTemplate = (question) => `
   </div>
   <div class="pertanyaan-user">${question.content}</div>
   <div class="line-boundary"></div>
-<br>
 `;
 
 const createArticleItemTemplate = (article) => `
@@ -91,7 +90,6 @@ const answeredTemplatePyscho = (answer) => `
   </div>
   <div class="pertanyaan-user">${answer.question.content}</div>
   <div class="line-boundary"></div>
-<br>
 <div>Dijawab oleh:</div>
   <div class="answer">
     <div><img src="../../image/dokter_ikon.png" alt="Gambar User"></div>

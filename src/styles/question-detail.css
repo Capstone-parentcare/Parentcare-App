@@ -34,5 +34,5 @@
 .line-boundary {
     border: 1px solid #1E1E1E;
     max-width: 1000px;
-    margin-top: 0.5em;
+    margin: 1em 0;
 }
