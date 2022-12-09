@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-import { logoutButton } from '../views/templates/template-creator';
 import logoutButtonInitiator from './logout-button-initiator';
 
 const logoutButtonContainer = document.querySelector('.menu');
@@ -14,9 +13,8 @@ const loginFormHandler = async (event) => {
     if (response.data.status === 'Success') {
       window.localStorage.setItem('doctorID', response.data.data[0].id);
 
-      logoutButtonContainer.innerHTML += logoutButton();
       logoutButtonInitiator.init({
-        logoutButtonContainer: document.querySelector('.logout'),
+        logoutButtonContainer,
       });
 
       window.location.href = '#/questions';

@@ -114,7 +114,7 @@ const detailAnswerTemplate = (question) => `
 <br>
 `;
 
-const logoutButton = () => `
+const logoutButtonTemplate = () => `
 <li class="logout"><a>
   <i class="fa fa-sign-out" aria-hidden="true"></i>
   <span>Keluar</span>
@@ -143,6 +143,6 @@ export {
   createQuestionItemTemplatePsychologist,
   answeredTemplatePyscho,
   detailAnswerTemplate,
-  logoutButton,
   answerButton,
+  logoutButtonTemplate,
 };

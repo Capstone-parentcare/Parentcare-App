@@ -1,12 +1,16 @@
 import DrawerInitiator from '../utils/drawer-initiator';
+import logoutButtonInitiator from '../utils/logout-button-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 class App {
-  constructor({ button, drawer, content }) {
+  constructor({
+    button, drawer, content, menu,
+  }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
+    this._menu = menu;
 
     this._initialAppShell();
   }
@@ -16,6 +20,10 @@ class App {
       button: this._button,
       drawer: this._drawer,
       content: this._content,
+    });
+
+    logoutButtonInitiator.init({
+      logoutButtonContainer: this._menu,
     });
   }
 
