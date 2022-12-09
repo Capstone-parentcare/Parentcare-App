@@ -22,9 +22,12 @@ class App {
       content: this._content,
     });
 
-    logoutButtonInitiator.init({
-      logoutButtonContainer: this._menu,
-    });
+    const isDoctor = window.localStorage.getItem('doctorID');
+    if (isDoctor) {
+      logoutButtonInitiator.init({
+        logoutButtonContainer: this._menu,
+      });
+    }
   }
 
   async renderPage() {
