@@ -16,8 +16,7 @@ const createQuestionItemTemplate = (question) => `
 `;
 
 const createQuestionItemTemplatePsychologist = (question) => `
-
-  <a href="#/answer/${question.id}" class="button-answer">Jawab</a>  
+  
   <a href="#/questions/${question.id}" class="question">
     <div>
       <h2>${question.title}</h2>
@@ -61,6 +60,7 @@ const detailQuestionTemplate = (question) => `
   </div>
   <div class="pertanyaan-user">${question.content}</div>
   <div class="line-boundary"></div>
+  <a href="#/answer/${question.id}" class="button-answer">Jawab</a>
 <br>
 `;
 
