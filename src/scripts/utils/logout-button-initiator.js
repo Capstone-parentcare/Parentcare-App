@@ -8,6 +8,7 @@ const logoutButtonInitiator = {
     logoutButton.addEventListener('click', async () => {
       logoutButton.remove();
       window.localStorage.removeItem('doctorID');
+      window.localStorage.removeItem('doctorUsername');
       window.location.href = '#/login';
     });
   },
