@@ -1,5 +1,5 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
-import QuestionFormInitiator from '../../utils/form-initiator';
+import { QuestionFormInitiator } from '../../utils/form-initiator';
 
 const QuestionForm = {
   async render() {

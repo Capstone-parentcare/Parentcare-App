@@ -1,5 +1,5 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
-import LoginFormInitiator from '../../utils/form-initiator';
+import { LoginFormInitiator } from '../../utils/form-initiator';
 
 const Login = {
   async render() {

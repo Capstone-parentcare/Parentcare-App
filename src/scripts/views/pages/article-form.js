@@ -1,5 +1,5 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
-import ArticleFormInitiator from '../../utils/form-initiator';
+import { ArticleFormInitiator } from '../../utils/form-initiator';
 
 const doctorID = localStorage.getItem('doctorID');
 const ArticleForm = {

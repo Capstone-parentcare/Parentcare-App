@@ -1,7 +1,7 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
 import UrlParser from '../../routes/url-parser';
 import EndpointSource from '../../data/endpoint-source';
-import AnswerFormInitiator from '../../utils/form-initiator';
+import { AnswerFormInitiator } from '../../utils/form-initiator';
 
 const doctorID = localStorage.getItem('doctorID');
 
