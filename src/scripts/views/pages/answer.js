@@ -1,9 +1,9 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
 import UrlParser from '../../routes/url-parser';
 import EndpointSource from '../../data/endpoint-source';
-import AnswerFormInitiator from '../../utils/answer-form-initiator';
+import AnswerFormInitiator from '../../utils/form-initiator';
 
-const doktorId = localStorage.getItem('doktorId');
+const doctorID = localStorage.getItem('doctorID');
 
 const Answer = {
   async render() {
@@ -22,7 +22,7 @@ const Answer = {
     <div class="form-container">
       <form id="answer-form" method="POST" action="${API_ENDPOINT.ANSWER}">
         <div>
-          <input type="text" id="doctor_id" name="doctor_id" placeholder="Judul Pertanyaan" value="${doktorId}"  hidden required></input>  
+          <input type="text" id="doctor_id" name="doctor_id" placeholder="Judul Pertanyaan" value="${doctorID}"  hidden required></input>  
         </div>
         <div>
           <input type="text" id="question_id" name="question_id" placeholder="Judul Pertanyaan" value="${question.id}" hidden required></input>

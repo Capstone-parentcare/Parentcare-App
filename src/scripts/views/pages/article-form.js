@@ -1,7 +1,7 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
-import ArticleFormInitiator from '../../utils/article-form-initiator';
+import ArticleFormInitiator from '../../utils/form-initiator';
 
-const doktorId = localStorage.getItem('doktorId');
+const doctorID = localStorage.getItem('doctorID');
 const ArticleForm = {
   async render() {
     return `
@@ -9,7 +9,7 @@ const ArticleForm = {
       <h1>Form Artikel</h1>
       <form id="article-form" method="POST" action="${API_ENDPOINT.ARTICLE}">
         <div>
-          <input hidden type="text" id="doctor_id" name="doctor_id" placeholder="Judul Pertanyaan" value="${doktorId}"  required></input>         
+          <input hidden type="text" id="doctor_id" name="doctor_id" placeholder="Judul Pertanyaan" value="${doctorID}"  required></input>         
         </div>
         <div>
           <label for="title">Judul:</label><br>
