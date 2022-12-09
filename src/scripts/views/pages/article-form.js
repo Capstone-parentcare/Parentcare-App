@@ -13,7 +13,7 @@ const ArticleForm = {
         </div>
         <div>
           <label for="title">Judul:</label><br>
-          <input type="text" id="title" name="title" placeholder="Judul Pertanyaan" required><br>
+          <input type="text" id="title" name="title" placeholder="Judul Artikel" required><br>
         </div>
         <div>
           <label for="image">Gambar:</label><br>
