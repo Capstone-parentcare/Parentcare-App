@@ -2,6 +2,7 @@ import questionFormHandler from './question-form-handler';
 import answerFormHandler from './answer-form-handler';
 import articleFormHandler from './article-form-handler';
 import loginFormHandler from './login-form-handler';
+import registerFormHandler from './register-form-handler';
 
 const QuestionFormInitiator = {
   init({ formContainer }) {
@@ -35,9 +36,18 @@ const LoginFormInitiator = {
   },
 };
 
+const RegisterFormInitiator = {
+  init({ formContainer }) {
+    formContainer.addEventListener('submit', (event) => {
+      registerFormHandler(event);
+    });
+  },
+};
+
 export {
   QuestionFormInitiator,
   AnswerFormInitiator,
   ArticleFormInitiator,
   LoginFormInitiator,
+  RegisterFormInitiator,
 };
