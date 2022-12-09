@@ -70,3 +70,10 @@
     padding: 0.5em;
   }
 } 
+
+
+@media screen and (max-width: 699px) {
+  .container-detail-article > img {
+      height: 300px;
+  }
+}
