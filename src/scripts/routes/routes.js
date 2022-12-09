@@ -9,6 +9,7 @@ import ArticlePsychologist from '../views/pages/article-psychologist';
 import ArticleForm from '../views/pages/article-form';
 import Answer from '../views/pages/answer';
 import AnswerPyscho from '../views/pages/question-detail-pyschologist';
+
 const routes = {
   '/': Home, // default page
   '/questions': Home,
