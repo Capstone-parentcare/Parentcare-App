@@ -22,19 +22,6 @@ registerRoute(
 );
 
 registerRoute(
-  /^https:\/\/restaurant-api\.dicoding\.dev\/(?:(list|detail))/,
-  new NetworkFirst({
-    cacheName: 'api-cache',
-    plugins: [
-      new ExpirationPlugin({
-        maxAgeSeconds: 60 * 60 * 24 * 30,
-        maxEntries: 100,
-      }),
-    ],
-  }),
-);
-
-registerRoute(
   ({ request }) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'ParentCare-image-cache',
