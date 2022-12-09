@@ -15,7 +15,6 @@ const routes = {
   '/articles': Article,
   '/articles/:id': ArticleDetail,
   '/articles_form': ArticleForm,
-
   '/answers_form/:id': AnswerForm,
   '/login': Login,
 };

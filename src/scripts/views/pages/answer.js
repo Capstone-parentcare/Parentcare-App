@@ -37,7 +37,6 @@ const Answer = {
     `;
   },
 
-  // eslint-disable-next-line no-empty-function
   async afterRender() {
     AnswerFormInitiator.init({
       formContainer: document.querySelector('#answer-form'),

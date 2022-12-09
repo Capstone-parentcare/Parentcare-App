@@ -15,22 +15,6 @@ const createQuestionItemTemplate = (question) => `
   </a>
 `;
 
-const createQuestionItemTemplatePsychologist = (question) => `
-  
-  <a href="#/questions/${question.id}" class="question">
-    <div>
-      <h2>${question.title}</h2>
-    </div>
-    <div class="question-content">
-      <p>${question.content}</p>
-    </div>
-    <div class="question-writer">
-      oleh : ${question.writer}
-    </div>
-    <hr>
-  </a>
-`;
-
 const detailQuestionWithAnswerTemplate = (answer) => `
 <div class="question-title">${answer.question.title}</div>
 <div class="answer-container">
@@ -81,36 +65,6 @@ const detailArticleTemplate = (article) => `
       <div class="agag"></div>
   </div>
 `;
-const answeredTemplatePyscho = (answer) => `
-<div class="question-title">${answer.question.title}</div>
-<div class="answer-container">
-  <div class="answer">
-    <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
-    <div class="user">${answer.question.writer}</div>
-  </div>
-  <div class="pertanyaan-user">${answer.question.content}</div>
-  <div class="line-boundary"></div>
-<div>Dijawab oleh:</div>
-  <div class="answer">
-    <div><img src="../../image/dokter_ikon.png" alt="Gambar User"></div>
-    <div class="user">${answer.doctor.username}</div>
-  </div>
-  <div class="pertanyaan-user">${answer.content}</div>
-  <div class="line-boundary"></div>
-</div>
-`;
-
-const detailAnswerTemplate = (question) => `
-<div class="question-title">${question.title}</div>
-<div class="answer-container">
-  <div class="answer">
-    <div><img src="../../image/user_ikon.png" alt="Gambar User"></div>
-    <div class="user">${question.writer}</div>
-  </div>
-  <div class="pertanyaan-user">${question.content}</div>
-  <div class="line-boundary"></div>
-<br>
-`;
 
 const logoutButtonTemplate = () => `
 <li class="logout"><a>
@@ -138,9 +92,6 @@ export {
   detailQuestionTemplate,
   createArticleItemTemplate,
   detailArticleTemplate,
-  createQuestionItemTemplatePsychologist,
-  answeredTemplatePyscho,
-  detailAnswerTemplate,
   answerButtonTemplate,
   logoutButtonTemplate,
 };
