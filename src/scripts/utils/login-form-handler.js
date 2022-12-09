@@ -12,6 +12,7 @@ const loginFormHandler = async (event) => {
   axios.post(`http://localhost:8081/api/login?email=${email}&password=${password}`).then((response) => {
     if (response.data.status === 'Success') {
       window.localStorage.setItem('doctorID', response.data.data[0].id);
+      window.localStorage.setItem('doctorUsername', response.data.data[0].username);
 
       logoutButtonInitiator.init({
         logoutButtonContainer,
