@@ -9,7 +9,7 @@ const ArticleForm = {
       <h1>Form Artikel</h1>
       <form id="article-form" method="POST" action="${API_ENDPOINT.ARTICLE}">
         <div>
-          <input hidden type="text" id="doctor_id" name="doctor_id" placeholder="Judul Pertanyaan" value="${doctorID}"  required></input>         
+          <input type="text" id="doctor_id" name="doctor_id" placeholder="Judul Pertanyaan" value="${doctorID}"  required></input>         
         </div>
         <div>
           <label for="title">Judul:</label><br>
