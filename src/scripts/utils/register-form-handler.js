@@ -13,7 +13,8 @@ const registerFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-
+    alert('Akun Sudah Dibuat Silahkan Login');
+    window.location.href = '#/login';
     if (response.status === 200) {
       alert('Akun Sudah Dibuat Silahkan Login');
       window.location.href = '#/login';
