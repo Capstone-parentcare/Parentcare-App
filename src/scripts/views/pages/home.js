@@ -18,7 +18,7 @@ const Home = {
     return `
     <hero-element></hero-element>
     <div id="question-container">
-      <a class="button-question" href="#/form">
+      <a class="button-question" href="#/questions_form">
         <i class="fa fa-pencil" aria-hidden="true"></i>
         Buat Pertanyaan
       </a>
